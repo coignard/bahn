@@ -1,0 +1,92 @@
+[package]
+name = "bahn-macos"
+description = "Bahn on the macOS desktop"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish.workspace = true
+
+[dependencies]
+bahn.workspace = true
+block2.workspace = true
+global-hotkey.workspace = true
+jiff.workspace = true
+objc2.workspace = true
+objc2-app-kit = { workspace = true, features = [
+    "std",
+    "block2",
+    "objc2-core-foundation",
+    "objc2-quartz-core",
+    "NSApplication",
+    "NSCell",
+    "NSColor",
+    "NSCursor",
+    "NSEvent",
+    "NSGraphics",
+    "NSMenu",
+    "NSMenuItem",
+    "NSPanel",
+    "NSResponder",
+    "NSRunningApplication",
+    "NSScreen",
+    "NSTrackingArea",
+    "NSView",
+    "NSWindow",
+    "NSWorkspace",
+] }
+objc2-core-foundation = { workspace = true, features = [
+    "std",
+    "CFCGTypes",
+    "CFData",
+    "CFNumber",
+    "CFString",
+] }
+objc2-core-graphics = { workspace = true, features = [
+    "std",
+    "CGColorSpace",
+    "CGGeometry",
+    "CGDataProvider",
+    "CGImage",
+] }
+objc2-event-kit = { workspace = true, features = [
+    "std",
+    "block2",
+    "EKCalendar",
+    "EKCalendarItem",
+    "EKEvent",
+    "EKEventStore",
+    "EKObject",
+    "EKParticipant",
+    "EKTypes",
+] }
+objc2-foundation = { workspace = true, features = [
+    "std",
+    "block2",
+    "NSArray",
+    "NSBundle",
+    "NSDate",
+    "NSEnumerator",
+    "NSError",
+    "NSGeometry",
+    "NSNotification",
+    "NSObject",
+    "NSOperation",
+    "NSRunLoop",
+    "NSString",
+    "NSTimeZone",
+    "NSTimer",
+    "NSUserDefaults",
+] }
+objc2-quartz-core = { workspace = true, features = [
+    "std",
+    "objc2-core-foundation",
+    "CADisplayLink",
+    "CALayer",
+    "CATransaction",
+] }
+
+[lints]
+workspace = true
